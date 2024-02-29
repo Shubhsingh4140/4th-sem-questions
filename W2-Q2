@@ -1,0 +1,33 @@
+#include<stdio.h>
+void main()
+{
+      int a[100],i,j,k,n,num,flag=0,T;
+      printf("enter no. of test cases:");
+      scanf("%d",&T);
+      for(t=0;t<T;t++)
+      {
+            printf("enter limit:");
+            scanf("%d",&n);
+            printf("enter elements\n");
+            for(i=0;i<n;i++)
+            {
+                  scanf("%d",&a[i]);
+            }
+            for(i=0;i<n;i++)
+            {
+                  for(j=i+1;j<n;j++)
+                  {
+                        k=j+1;
+                        if(a[i]+a[j]==a[k])
+                        {
+                              printf("\n");
+                              printf("%d %d %d",i+1,j+1,k+1);
+                              flag++;
+                        }
+                  }
+            }
+            if(flag==0)
+                  printf("No sequence found");
+      }
+      
+}
